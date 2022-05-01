@@ -166,6 +166,7 @@ def new():
     if libprofile.has_profile(name):
         libinput.clear()
         print("Profile already exists: " + name)
+        return new()
 
     def get_game_root():
         game_root = libinput.get("Enter game root directory: ", new).strip()
