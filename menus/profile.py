@@ -24,7 +24,7 @@ def main():
     opt = libinput.get("> ", main).lower()
 
     if not opt.isdigit():
-        if opt == "q":
+        if opt == "q" or opt == "e":
             return exit(0)
         elif opt == "n":
             libinput.clear()
