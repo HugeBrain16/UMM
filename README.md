@@ -2,6 +2,7 @@
     <h1 align="center">Universal Mod Manager (UMM)</h1>
     <p align="center">A basic text-based <i>Mod Manager</i>, all it does is replace the existing gamefiles with the modified ones.<br/>
     this will also backup original gamefiles, and restore them when you close the game.</p>
+    <img align="center" src="./assets/lul.png" width=400px height=200px>
 </dev>
 
 # How to Use
