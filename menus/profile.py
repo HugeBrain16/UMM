@@ -112,9 +112,12 @@ def main():
         )
 
         # poll process until its closed
-        while game.poll() is None:
+        while True:
             try:
-                game.poll()
+                poll = game.poll()
+
+                if poll is not None:
+                    break
             except (EOFError, KeyboardInterrupt):
                 print("[WARN] Close from the game!")
 
