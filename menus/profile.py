@@ -127,8 +127,9 @@ def main():
                 backup = os.path.join(tempdir, "backup", file)
 
                 if os.path.isfile(src) and not os.path.isfile(backup):
-                    print(f"[MOD] Removing {dest!r}...")
-                    os.remove(dest)
+                    if os.path.isfile(dest):
+                        print(f"[MOD] Removing {dest!r}...")
+                        os.remove(dest)
                 elif os.path.isfile(src) and os.path.isfile(backup):
                     print(f"[MOD] Restoring backuped file {backup!r} to {dest!r}...")
                     shutil.copy2(backup, dest)
