@@ -105,7 +105,11 @@ def main():
 
                 shutil.copy2(src, dest)
 
-        game = subprocess.Popen(profile["game"])
+        game = subprocess.Popen(
+            profile["game"],
+            creationflags=subprocess.DETACHED_PROCESS
+            | subprocess.CREATE_NEW_PROCESS_GROUP,
+        )
 
         # poll process until its closed
         while game.poll() is None:
