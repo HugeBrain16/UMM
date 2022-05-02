@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 
 from lib import libinput, libmeta, libprofile
 
@@ -25,7 +26,7 @@ def main():
 
     if not opt.isdigit():
         if opt == "q" or opt == "e":
-            return exit(0)
+            return sys.exit(0)
         elif opt == "n":
             libinput.clear()
             return new()
